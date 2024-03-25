@@ -5,7 +5,7 @@ services:
     tty: true # やはり謎
     volumes:
       - ./next-front:/app # ボリュームのパス設定？
-    entrypoint:
+    environment:
       - WATCHPACK_POLLING=true # ホットリロード用の設定らしい
     command: sh -c "npm run dev" # Next.jsの起動コマンド（お馴染み）
     ports:
