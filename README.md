@@ -2,6 +2,37 @@
 
 Docker ハンズオン用のリポジトリです！
 
+## 学習メモ
+Go Serverの準備は大変なので、とりあえずNext.jsの環境構築とDocker Composeでの軌道を目標とした。
+ルートディレクトリで`docker-compose up -d`を実行すると、以下のようなログが表示された。
+
+```bash
+2024-03-25 23:19:11 next-front-1  | 
+2024-03-25 23:19:11 next-front-1  | > app@0.1.0 dev
+2024-03-25 23:19:11 next-front-1  | > next dev
+2024-03-25 23:19:11 next-front-1  | 
+2024-03-25 23:19:22 next-front-1  |    ▲ Next.js 14.1.4
+2024-03-25 23:19:22 next-front-1  |    - Local:        http://localhost:3000
+2024-03-25 23:19:22 next-front-1  | 
+2024-03-25 23:19:22 next-front-1  | Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2024-03-25 23:19:22 next-front-1  | This information is used to shape Next.js' roadmap and prioritize features.
+2024-03-25 23:19:22 next-front-1  | You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2024-03-25 23:19:22 next-front-1  | https://nextjs.org/telemetry
+2024-03-25 23:19:22 next-front-1  | 
+2024-03-25 23:19:39 next-front-1  |  ✓ Ready in 18.2s
+2024-03-25 23:19:40 next-front-1  |  ○ Compiling / ...
+2024-03-25 23:19:56 next-front-1  |  ✓ Compiled / in 17.5s (523 modules)
+2024-03-25 23:19:59 next-front-1  |  ○ Compiling /favicon.ico ...
+2024-03-25 23:20:05 next-front-1  |  ✓ Compiled /favicon.ico in 6.1s (521 modules)
+```
+
+`docker-compose stop`をターミナルで実行すると、開発サーバーが停止したことを確認できた。
+（ブラウザのページにアクセスできなくなった。）
+Docker Desktopから確認すると、停止状態になっているのみであり、再開ボタンを押すと再び起動した。
+コマンドラインから操作しても良いけど、若干のラグがあったため、ソフト側から操作したほうがログの確認もスムーズだし良いかも。
+
+---
+
 ルート直下 Dockerfile
 
 ```Dockerfile
