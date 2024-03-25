@@ -1,0 +1,13 @@
+services:
+  next-front: # プロジェクトの名前付けみたいなもの
+    build:
+      context: . # カレントディレクトリ基準
+    tty: true # やはり謎
+    volumes:
+      - ./next-front:/app # ボリュームのパス設定？
+    entrypoint:
+      - WATCHPACK_POLLING=true # ホットリロード用の設定らしい
+    command: sh -c "npm run dev" # Next.jsの起動コマンド（お馴染み）
+    ports:
+      - "3000:3000" # ポート設定
+# 補完が効くので案外勘でも書けそう
